@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 250 250 252;
+  --surface: 255 255 255;
+  --elevated: 244 244 248;
+  --border: 226 228 234;
+  --fg: 17 19 24;
+  --muted: 110 115 130;
+  --accent: 99 102 241;     /* indigo-500 */
+  --accent-fg: 255 255 255;
+}
+
+.dark {
+  --bg: 10 11 15;
+  --surface: 17 19 26;
+  --elevated: 24 27 36;
+  --border: 38 42 54;
+  --fg: 236 238 244;
+  --muted: 140 146 162;
+  --accent: 129 140 248;    /* indigo-400 */
+  --accent-fg: 12 14 20;
+}
+
+html, body { background: rgb(var(--bg)); color: rgb(var(--fg)); }
+body { font-feature-settings: "ss01","cv11"; }
+
+* { border-color: rgb(var(--border)); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: rgb(var(--border)); border-radius: 999px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+.glass {
+  background: rgb(var(--surface) / 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
